@@ -203,6 +203,7 @@ end
 
 
 function love.draw()
+    -- grey bg
     love.graphics.clear(0.2, 0.2, 0.2)
 
     box1:render()
@@ -210,15 +211,15 @@ function love.draw()
     box3:render()
     box4:render()
 
-    -- white
+    -- white font
     love.graphics.setColor(1, 1, 1)
 
     love.graphics.setFont(smallFont)
     love.graphics.printf(message , 0, WINDOW_HEIGHT - 120, WINDOW_WIDTH, 'center')
 
     if gameState == 'loss' then
-        -- black bg
-        love.graphics.clear(0, 0, 0)
+        -- grey bg
+        love.graphics.clear(0.2, 0.2, 0.2)
 
         love.graphics.printf("Press enter to start again" , 0, WINDOW_HEIGHT / 2 + 25 , WINDOW_WIDTH, 'center')
 
